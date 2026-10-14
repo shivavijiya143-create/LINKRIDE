@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="LinkRide — a clear, simple bike ride-sharing prototype.">
+  <title>LinkRide — Ride together, move smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="prototype-banner"><span class="pulse-dot"></span> DEMO PROTOTYPE <span class="banner-divider">•</span> No live riders, bookings, payments, or location tracking</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="LinkRide home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M7 27.5 13 14h8l-5.8 13.5H7Z" fill="currentColor"/><path d="M20 14h8l-5.8 13.5h-8L20 14Z" fill="#8BE0B0"/><circle cx="29.5" cy="27" r="3.5" fill="#8BE0B0"/></svg></span>
+      <span>Link<span>Ride</span><small>MOVE SMARTER</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#safety">Safety first</a>
+      <a href="#ride-panel">Book a ride</a>
+    </nav>
+    <button class="header-cta" id="headerBook">Get started <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A simpler way to get there</div>
+        <h1>Good journeys<br>start with <em>LinkRide.</em></h1>
+        <p class="hero-description">A clearer way to arrange a bike ride. Share your trip details, follow the booking steps, and know what happens next.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#ride-panel">Plan a ride <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>LR</span><span>GO</span><span>+</span></div>
+          <div><strong>Built around clarity</strong><small>Simple steps. Clear trip status.</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+        <div class="map-card">
+          <div class="map-topline"><span class="map-live-dot"></span> YOUR JOURNEY, MADE CLEAR <span class="map-menu">•••</span></div>
+          <div class="map-art" aria-label="Illustrative route map">
+            <svg class="map-lines" viewBox="0 0 520 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path d="M-20 72 C80 105 70 15 170 42 S270 125 360 65 470 45 560 95" />
+              <path d="M-20 160 C75 135 115 225 190 183 S280 130 335 210 450 285 550 220" />
+              <path d="M20 360 C90 285 85 240 160 250 S250 320 315 270 390 180 520 160" />
+              <path d="M100 -20 C130 60 220 55 220 140 S190 250 245 380" />
+              <path d="M345 -20 C320 65 385 110 380 165 S315 255 370 380" />
+              <path d="M0 300 L520 300 M0 110 L520 110" />
+            </svg>
+            <div class="route route-dashed"></div>
+            <div class="map-pin pickup-pin"><span> A </span></div>
+            <div class="map-pin drop-pin"><span> B </span></div>
+            <div class="map-label label-start">Pickup point</div>
+            <div class="map-label label-end">Your destination</div>
+            <div class="map-compass">N <span>↑</span></div>
+          </div>
+          <div class="route-summary">
+            <div class="route-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="7" cy="23" r="4.5"/><circle cx="25" cy="23" r="4.5"/><path d="m7 23 6-12h5l7 12H7l5-8h8"/></svg></div>
+            <div class="route-info"><strong>Your trip, at a glance</strong><small>Pickup · Destination · Booking status</small></div>
+            <span class="status-pill">Organized</span>
+          </div>
+        </div>
+        <div class="floating-note"><span class="floating-check">✓</span><div><strong>Every step is visible</strong><small>From request to completion</small></div></div>
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      </div>
+    </section>
+
+    <section class="metrics-strip" aria-label="LinkRide principles">
+      <div><span class="metric-icon">↗</span><p><strong>Clear trip details</strong><small>Pickup and destination together</small></p></div>
+      <div><span class="metric-icon">◎</span><p><strong>Visible booking status</strong><small>Know the current step</small></p></div>
+      <div><span class="metric-icon">⌁</span><p><strong>Safety-minded design</strong><small>Responsible by default</small></p></div>
+    </section>
+
+    <section class="booking-section section-wrap" id="ride-panel">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> TRY THE PROTOTYPE</div><h2>Where are you<br><em>headed?</em></h2></div>
+        <p>Explore the passenger and rider experience. This demo uses sample information and does not contact real riders.</p>
+      </div>
+      <div class="booking-layout">
+        <div class="booking-card">
+          <div class="role-switch" role="tablist" aria-label="Choose experience">
+            <button class="role-tab active" id="passengerTab" role="tab" aria-selected="true" aria-controls="passengerPanel"> <span>↗</span> Passenger</button>
+            <button class="role-tab" id="riderTab" role="tab" aria-selected="false" aria-controls="riderPanel"><span>⌁</span> Rider / Driver</button>
+          </div>
+          <div class="role-panel" id="passengerPanel" role="tabpanel" aria-labelledby="passengerTab">
+            <div class="form-heading"><div><h3>Plan your ride</h3><p>Enter a sample trip to preview the booking flow.</p></div><span class="step-count">01 <i>/ 03</i></span></div>
+            <form id="rideForm">
+              <label class="field-label" for="pickup">Pickup point</label>
+              <div class="input-wrap"><span class="field-symbol pickup-symbol"></span><input id="pickup" name="pickup" placeholder="e.g. College main gate" required maxlength="100"></div>
+              <label class="field-label" for="destination">Destination</label>
+              <div class="input-wrap"><span class="field-symbol destination-symbol"></span><input id="destination" name="destination" placeholder="e.g. City centre" required maxlength="100"></div>
+              <div class="form-row">
+                <div class="form-col"><label class="field-label" for="rideDate">Preferred date</label><input class="plain-input" type="date" id="rideDate" required></div>
+                <div class="form-col"><label class="field-label" for="rideTime">Preferred time</label><input class="plain-input" type="time" id="rideTime" required></div>
+              </div>
+              <div class="notice-inline"><span>ⓘ</span><p>Use public pickup points for this demo. Don't enter personal contact details.</p></div>
+              <button class="button button-primary full-button" type="submit">Preview ride request <span>→</span></button>
+              <p class="form-error" id="formError" role="alert"></p>
+            </form>
+          </div>
+          <div class="role-panel hidden" id="riderPanel" role="tabpanel" aria-labelledby="riderTab">
+            <div class="form-heading"><div><h3>Rider dashboard</h3><p>Preview how a rider could manage requests.</p></div><span class="step-count">02 <i>/ 03</i></span></div>
+            <div class="rider-status-row"><div><span class="availability-dot"></span><strong>Demo availability</strong><small>Local preview only</small></div><button id="availabilityToggle" class="toggle-button" aria-pressed="true">Available</button></div>
+            <div class="request-preview"><div class="request-preview-top"><span class="request-tag">SAMPLE REQUEST</span><span class="request-time">Just now · Demo</span></div><div class="request-route"><span class="route-dot-small"></span><div><small>PICKUP</small><strong>College main gate</strong></div></div><div class="request-route"><span class="route-dot-small end"></span><div><small>DESTINATION</small><strong>City centre</strong></div></div><div class="request-meta"><span>◷ Preferred time: 4:30 PM</span><span>1 passenger</span></div><div class="rider-actions"><button class="button button-primary" id="acceptRequest">Accept sample</button><button class="button button-secondary" id="declineRequest">Decline</button></div><p class="rider-feedback" id="riderFeedback" role="status">Sample request only — no passenger will be notified.</p></div>
+          </div>
+        </div>
+        <aside class="status-card">
+          <div class="status-card-top"><span class="status-icon">↗</span><span class="demo-label">DEMO BOOKING</span></div>
+          <h3>Your booking<br>at a glance</h3>
+          <p class="status-intro">A simple view of the booking journey, from request to result.</p>
+          <div class="status-timeline" id="statusTimeline">
+            <div class="timeline-item current" data-state="requested"><span class="timeline-marker">1</span><div><strong>Request created</strong><small>Waiting for a rider response</small></div><span class="timeline-state">Current</span></div>
+            <div class="timeline-item" data-state="accepted"><span class="timeline-marker">2</span><div><strong>Accepted</strong><small>Rider agrees to the request</small></div></div>
+            <div class="timeline-item" data-state="progress"><span class="timeline-marker">3</span><div><strong>In progress</strong><small>Trip has started</small></div></div>
+            <div class="timeline-item" data-state="completed"><span class="timeline-marker">4</span><div><strong>Completed</strong><small>Trip finished</small></div></div>
+          </div>
+          <div class="status-actions"><button id="advanceStatus" class="button button-dark full-button" disabled>Submit a ride request first</button><button id="resetDemo" class="reset-button">Reset demo</button></div>
+          <p class="status-footnote"><span>●</span> Prototype state only. Not a live reservation.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="how-section section-wrap" id="how-it-works">
+      <div class="center-heading"><div class="eyebrow"><span class="eyebrow-line"></span> SIMPLE BY DESIGN <span class="eyebrow-line"></span></div><h2>Three steps. <em>More clarity.</em></h2><p>LinkRide makes the planned ride process easier to understand.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-illustration illustration-one"><span class="illustration-pin">A</span><span class="illustration-pin pin-two">B</span><div class="illustration-path"></div></div><h3>Share your trip</h3><p>Enter a pickup point, destination, and preferred time.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-illustration illustration-two"><div class="illustration-request"><span>✓</span><div><b>Request sent</b><small>Demo status</small></div></div></div><h3>Review the request</h3><p>A proposed flow lets a rider accept or decline an eligible request.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-illustration illustration-three"><div class="illustration-complete"><span>✓</span><b>Trip status</b><small>Updated clearly</small></div></div><h3>Follow the status</h3><p>See whether the request is pending, accepted, in progress, or complete.</p></article>
+      </div>
+    </section>
+
+    <section class="safety-section" id="safety"><div class="section-wrap safety-inner"><div class="safety-emblem"><span>✓</span><div class="emblem-ring"></div></div><div class="safety-copy"><div class="eyebrow light-eyebrow"><span class="eyebrow-line"></span> RESPONSIBLE BY DESIGN</div><h2>Convenience matters.<br><em>Safety comes first.</em></h2><p>This concept is designed with privacy and responsible use in mind. A real service would need verified users, secure access controls, incident support, legal review, and compliance with local transport and insurance requirements.</p><a href="#prototype-note" class="safety-link">Understand the prototype <span>→</span></a></div><div class="safety-checks"><div><span>✓</span><p><strong>Privacy-conscious</strong><small>Limit access to trip data</small></p></div><div><span>✓</span><p><strong>Clear responsibilities</strong><small>Defined passenger and rider roles</small></p></div><div><span>✓</span><p><strong>Legal checks required</strong><small>Before any real-world launch</small></p></div></div></div></section>
+
+    <section class="prototype-section section-wrap" id="prototype-note"><div class="prototype-note-icon">i</div><div><h3>About this demo</h3><p>LinkRide is currently a front-end prototype. Requests, rider actions, and status changes are simulated in your browser. This website does not connect passengers to real riders, verify identities, calculate actual routes, take payments, or provide emergency support. Do not use it to arrange a real journey.</p></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark"><svg viewBox="0 0 40 40"><path d="M7 27.5 13 14h8l-5.8 13.5H7Z" fill="currentColor"/><path d="M20 14h8l-5.8 13.5h-8L20 14Z" fill="#8BE0B0"/><circle cx="29.5" cy="27" r="3.5" fill="#8BE0B0"/></svg></span><span>Link<span>Ride</span><small>MOVE SMARTER</small></span></a><p>Designed for clearer journeys. Built as a college project prototype.</p><span class="footer-copyright">© <span id="year"></span> LinkRide · Prototype</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
